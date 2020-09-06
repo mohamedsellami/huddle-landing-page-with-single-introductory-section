@@ -1,0 +1,160 @@
+$violet: hsl(257, 40%, 49%);
+
+html {
+  box-sizing: border-box;
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+  width: 100%;
+  height: 100vh;
+  background-image: url(../images/bg-mobile.svg);
+  background-color: $violet;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.main-content {
+  width: 300px;
+  margin: auto;
+  img {
+    width: 90%;
+    margin-left: 5%;
+  }
+  .content {
+    h1 {
+      color: white;
+      font-family: "Poppins", sans-serif;
+      font-size: 1.5em;
+      text-align: center;
+      margin-top: 40px;
+    }
+    p {
+      color: white;
+      width: 100%;
+      line-height: 25px;
+      text-align: center;
+    }
+    .button {
+      width: 200px;
+      height: 40px;
+      margin: 30px auto;
+      button {
+        width: 100%;
+        height: 100%;
+        border-radius: 100px;
+        border: none;
+        background-color: white;
+        font-size: 15px;
+        font-weight: 700;
+        color: $violet;
+        box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.5);
+        cursor: pointer;
+        &:hover {
+          background-color: hsl(257, 51%, 86%);
+        }
+      }
+    }
+  }
+}
+.logo {
+  width: 150px;
+  margin: 10% 0 15% 10%;
+}
+.social-media {
+  width: 110px;
+  display: flex;
+  justify-content: space-between;
+  margin: 60px auto 20px auto;
+  div {
+    width: 30px;
+    height: 30px;
+    border: 1px solid white;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    .fab {
+      font-size: 15px;
+      color: white;
+    }
+    &:hover {
+      background-color: white;
+      .fab {
+        color: $violet;
+      }
+    }
+  }
+}
+.attribution {
+  font-size: 8px;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 10px;
+  a {
+    color: hsl(228, 43%, 16%);
+  }
+}
+@media screen and(min-width: 700px) {
+  body {
+    background-image: url(../images/bg-desktop.svg);
+    background-size: cover;
+  }
+  .main-content {
+    display: flex;
+    width: unset;
+    margin: 0;
+    img {
+      margin: 0 3% 0 5%;
+      width: auto;
+    }
+    .content {
+      h1 {
+        font-size: 2.3em;
+        text-align: start;
+      }
+      p {
+        width: 455px;
+        text-align: start;
+      }
+      .button {
+        height: 50px;
+        margin: 0;
+        button {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+  .logo {
+    width: 200px;
+    margin: 3% 0 5% 5%;
+  }
+  .social-media {
+    width: 140px;
+    float: right;
+    margin: 50px;
+    div {
+      width: 40px;
+      height: 40px;
+      .fab {
+        font-size: 20px;
+      }
+    }
+  }
+  .attribution {
+    font-size: 11px;
+    position: absolute;
+    top: 770px;
+    left: 40%;
+  }
+}
